@@ -1,0 +1,733 @@
+/* UNIVERSAL */
+:root {
+    --primary: #1E88E5;
+    --secondary: #F4511E;
+    --neutral: #F5F5F5;
+}
+
+* { font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+a {
+    color: #000000fa;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--neutral);
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------END OF UNIVERSAL------------------- */
+/* ------------------START OF INDEX------------------- */
+
+h2 {
+    color: #000000;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* INDEX - NAVBAR */
+.navibar {
+    align-items: center;
+    background-color: var(--primary);
+    display: flex;
+    min-height: 60px;
+    padding: 0 20px;
+}
+
+.navibar .logo {
+        align-items: center;
+        display: flex;
+        padding: 8px 20px;
+}
+
+.navibar .logo img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+}
+
+.nav-links {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.nav-links a:focus-visible {
+    background-color: var(--secondary);
+    color: white;
+    outline: 3px solid white;
+    outline-offset: -3px;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* INDEX - NAVBAR __ MOBILE */
+@media (max-width: 600px) {
+    .navibar {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navibar .logo {
+        padding: 8px 15px;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    .nav-links a {
+        padding: 12px 10px;
+        font-size: 0.9em;
+    }
+}
+
+.footer {
+    text-align: center;
+    background: var(--primary);
+    padding: 20px;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials i {
+    font-size: 24px;
+    color: white;
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(10, 92, 164, 0.43), rgba(10, 92, 164, 0.43)),
+        url('assets/images/beach.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-class {
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-class p {
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.destinationhome {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.destinationhome h2 {
+    margin-bottom: 30px;
+}
+
+.destination-class {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------------END OF INDEX---------------------------- */
+/* ------------------START OF DESTINATION------------------- */
+
+.page-header {
+    padding: 50px 20px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.destination-card {
+    background-color: white;
+    border: 1px solid var(--neutral);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
+}
+
+.destination-card-content {
+    padding: 20px;
+}
+
+.destination-card button {
+    align-self: flex-end;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 20px 20px auto;
+}
+
+.form-section {
+    padding: 60px 20px;
+    background-color: var(--neutral);
+}
+
+.form-intro {
+    padding-bottom: 20px;
+}
+
+.form-container {
+    width: min(100%, 600px);
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid var(--neutral);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    height: 52px;
+    padding: 0 40px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    background-color: white;
+    cursor: pointer;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▾";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-wrapper select {
+    appearance: none;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 40px 12px 16px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #111;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    width: 100%;
+}
+
+.form-button {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 100%;
+    height: 52px;
+}
+
+.form-message {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.confirmation-message, .form-message {
+    background-color: #E8F5E9;
+    border-left: 5px solid #43A047;
+    border-radius: 5px;
+    color: #2E7D32;
+    padding: 12px 15px;
+    margin: 0 0 25px;
+    text-align: left;
+    line-height: 1.5;
+    display: none;
+}
+
+.modal {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    padding: 20px;
+    position: fixed;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active .modal-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    position: relative;
+    transform: translateY(20px) scale(0.98);
+    transition: transform 0.25s ease;
+    width: min(100%, 600px);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.destination-card h3 {
+    margin: 15px 20px 5px;
+}
+
+.destination-card p {
+    margin: 0 20px 20px;
+}
+
+.destination-card button, .form-button, .hero button {
+    transition: background-color 0.3s ease;
+}
+
+.destination-card button:hover, .form-button:hover, .hero button:hover {
+    background-color: var(--primary);
+}
+
+.destination-card button:focus-visible, .form-button:focus-visible, .hero button:focus-visible {
+    outline: 3px solid var(--primary);
+}
+
+.destination-card button:active, .form-button:active, .hero button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+    outline: none;
+}
+
+.form-button:hover {
+    background-color: var(--primary);
+}
+
+.modal-close:hover {
+    background: none;
+    color: var(--secondary);
+    transform: none;
+}
+/* ------------------END OF DESTINATION------------------- */
+
+/* ------------------START OF CONTACT------------------- */
+/* CONTACT - contact.html */
+.contact-page {
+    padding: 50px 20px;
+}
+
+.contact-intro {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    text-align: left;
+}
+
+.contact-intro h2 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-intro p {
+    line-height: 1.5;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+.contact-info, .contact-form-container {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact-info h3, .contact-form-container h3 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.map-placeholder {
+    background-color: var(--neutral);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    margin-top: 20px;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.map-placeholder p {
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0;
+}
+
+#contactConfirmation {
+    background-color: #E8F5E9;
+    border-left: 5px solid #43A047;
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 0 0 25px;
+    display: none;
+}
+/* ------------------END OF CONTACT------------------- */
+
+/* ------------------START OF ABOUT------------------- */
+/* ABOUT - about.html */
+.about-page {
+    padding: 50px 20px;
+}
+
+.about-story {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 40px;
+}
+
+.about-story h2 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-story p {
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.why-us {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.why-us h2, .team h2 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-card i {
+    color: var(--primary);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    line-height: 1.5;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team h2 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.team-placeholder {
+    background-color: var(--neutral);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card h3 {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.team-card p {
+    color: #555;
+    text-align: left;       
+}
+/* ------------------END OF ABOUT------------------- */
+
+
+/* RESPONSIVENESS */
+/* desktop-3, tablet-2, mobile-1 */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-class {
+        grid-template-columns: 1fr;
+    }
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .navibar {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navibar .logo {
+        padding: 8px 15px;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    .nav-links a {
+        padding: 12px 10px;
+        font-size: 0.9em;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero {
+        height: 350px;
+        padding: 20px;
+    }
+    .destination-card {
+        min-height: auto;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-class {
+        grid-template-columns: 1fr;
+    }
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-page {
+        padding: 30px 15px;
+    }
+    .about-story {
+        padding: 25px 20px;
+    }
+    .contact-page {
+        padding: 30px 15px;
+    }
+    .contact-info, .contact-form-container {
+        padding: 20px;
+    }
+}
